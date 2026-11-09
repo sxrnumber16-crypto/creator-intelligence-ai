@@ -1,0 +1,27 @@
+{
+  "name": "creator-intelligence-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered YouTube Creator Intelligence Ecosystem - Chrome Extension + Backend API",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "dev:backend": "npm run dev --workspace @cia/backend",
+    "dev:extension": "npm run dev --workspace @cia/extension",
+    "db:migrate": "npm run db:migrate --workspace @cia/backend",
+    "db:generate": "npm run db:generate --workspace @cia/backend",
+    "postinstall": "npm run db:generate --workspace @cia/backend --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
