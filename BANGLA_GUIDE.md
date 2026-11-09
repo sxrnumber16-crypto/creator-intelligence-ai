@@ -277,6 +277,7 @@ https://<আপনার-ডোমেইন>/api/auth/google/callback
 
 | সমস্যা | সমাধান |
 | --- | --- |
+| Railway build এরর: `"/apps/backend": not found` | ভুল ফোল্ডার থেকে ডিপ্লয় হয়েছে। যে ফোল্ডারে সরাসরি `apps`, `packages`, `package.json`, `railway.json` দেখা যায় সেখানে `cd` করে আবার `railway up` চালান (Windows-এ `dir`, Mac-এ `ls` দিয়ে যাচাই করুন) |
 | `docker compose` কাজ করছে না | Docker Desktop চালু আছে কিনা দেখুন |
 | ব্যাকএন্ড চালু হচ্ছে না | `.env`-এ সব REPLACE_WITH... বদলানো হয়েছে কিনা দেখুন; Postgres/Redis চালু আছে কিনা দেখুন |
 | ডাটাবেস এরর | `npm run db:migrate` আবার চালান |
